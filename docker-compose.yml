@@ -1,0 +1,22 @@
+services:
+
+  # Image d'ubuntu propre
+  java_test_en:
+    image: ubuntu:latest
+    container_name: java_test_env
+
+    # Redemmarer si il y a un problème
+    restart: always
+
+    # Commandes au démarrage du conteneur
+    command: |
+      /bin/bash -c "
+      apt-get update && \
+      apt-get install -y openjdk-17-jdk vim git && \
+      echo 'Java 17 installation complete.' && \
+      tail -f /dev/null
+      "
+
+    #Volume pour le partage du code
+    volumes:
+      - ./code_to_test:/app
