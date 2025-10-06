@@ -1,3 +1,7 @@
+# Docker compose test for a java app testing environment
+
+This project was made to test the capabilities of docker compose. I wanted to see how it could help me to test a java app, and help me to share it easily.
+
 ## How to start it
 
 You only need 2 commands to start :
